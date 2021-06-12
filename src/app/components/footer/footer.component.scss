@@ -1,0 +1,67 @@
+.fondo{
+    background-color: #F5F5F7;
+    border-style: solid;
+    border-color: #D2D2D7;
+    border-width: 1px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;    
+}
+
+
+
+.cardSecudario{
+    padding-left: 20px;
+    padding-right: 20PX;
+    width: 24%;
+    .title{
+        font-size: 14px;
+        color: #111111;
+        font-weight: 500px;             
+        margin-top: 50px;
+        margin-bottom: 50px; 
+    }
+    .subtitle{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 14px;
+        color: #6B7280;
+        font-weight: normal;        
+    }
+    .separador{
+        padding-bottom: 10px;
+    }   
+}
+
+.cardPrimario{    
+    width: 30%;    
+    .title{
+        font-size: 27.648px;
+        color: #111111;
+        font-weight: 500px;             
+        margin-top: 50px;
+        margin-bottom: 50px; 
+    }
+    .subtitle{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-size: 14px;
+        color: #6B7280;
+        font-weight: normal;        
+    }
+    .separador{
+        padding-bottom: 5px;
+    }   
+}
+
+.botonPagar{
+    height: 56px;
+    width: 113px;
+    background-color: #1E96D4;
+    color: white;
+    border-radius: 8px;
+}

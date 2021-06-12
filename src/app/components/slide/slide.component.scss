@@ -1,0 +1,56 @@
+
+
+  .tile {
+    min-height: 200px;
+    background-color: #ccc;
+    background-size: cover !important;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  
+  .myPoint {
+    list-style-type: none;
+    text-align: center;
+    padding: 12px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: auto;
+    box-sizing: border-box;
+
+  }
+  
+  .carouselHoved {
+    opacity: 0.4;
+  }
+  
+  .myBannerPoint {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    color: beige;
+    justify-content: center;
+    list-style-type: none;
+    background: rgba(0, 0, 0, 0.34);
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+
+  }
+  
+  .carouselTile {
+    padding: 10px;
+    box-sizing: border-box;
+    .tile {
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+  
