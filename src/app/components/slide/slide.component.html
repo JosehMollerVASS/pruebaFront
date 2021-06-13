@@ -1,21 +1,46 @@
-<div  class="detailTitleSelected">
-    Choose your finish.
+<div *ngIf="padre == 'detailProduct'">
+    <div class="detailTitleSelected">
+        Choose your finish.
     </div>
-<ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="imgags">
-    <mat-card style="margin-right: 15px;" *nguCarouselDef="let item; let i = index; let ani = animate" class="mat-elevation-z0; caruselProducto">        
-        <div   class="subtitle">
-            Ivory White
-        </div>
-        <div class="contentSubtitle">
-            For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True. 
-        </div>
-      <div >
-      <!-- <div class="tile" [style.background]="'url('+item+')'">
-        <h1>{{i + 1}}--{{item}}</h1>
-      </div> -->
-    </div>
-    
-    </mat-card>
 
-  
-</ngu-carousel>
+    <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="choseFinishTitle">
+        <mat-card  [ngClass]="{'selecionado': selects[i]}" (click)="select(i)" style="margin-right: 10px;"  *nguCarouselDef="let item; let i = index; let ani = animate"
+            class="mat-elevation-z0; caruselProducto ">
+            <div class="subtitle">
+                {{choseFinishTitle[i]}}                
+            </div>
+            <div class="contentSubtitle">
+               {{choseFinish[i]}}
+            </div>
+            <div>
+            </div>
+        </mat-card>
+    </ngu-carousel>
+</div>
+
+<div *ngIf="padre == 'product'">
+    <ngu-carousel  #myCarousel [inputs]="carouselTileConfig" [dataSource]="imgags">
+        <mat-card [ngClass]="{'selecionado': selectsProd[i]}" (click)="selectProdct(i)" style="margin-right: 15px;" *nguCarouselDef="let item; let i = index; let ani = animate"
+            class="mat-elevation-z0; caruselProductoSlide">            
+                <img  style="width: 80px; top: 22%;
+                left: 35%; position: absolute; margin: -25px 10 0 -25px" mat-card-image  [src]="imageDetail[i]" />                       
+        </mat-card>
+    </ngu-carousel>
+</div>
+
+
+<div *ngIf="padre == 'caracteristicProduct'">
+    <ngu-carousel #myCarousel [inputs]="carouselTileConfig" [dataSource]="imgags">
+        <mat-card  *nguCarouselDef="let item; let i = index; let ani = animate"
+            class="mat-elevation-z0; caruselProductoSlideCaracteristic">
+            <div class="subtitleDetail">
+                <img  style="width: 25px; padding-bottom: 15px; margin: auto; display: block;" mat-card-image  [src]="charterProduct[i]" />
+                <div >
+                    {{titleCharterProduct[i]}}
+                </div>
+            </div>
+            <div>
+            </div>
+        </mat-card>
+    </ngu-carousel>
+</div>

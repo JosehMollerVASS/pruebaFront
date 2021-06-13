@@ -1,13 +1,22 @@
 
 
 .title{
-//    max-width: 592px;
- //   max-height: 48px;
     font-size: 40px;
     font-weight: bold;
     color: #111111;
 }
 
+.submesage{
+    font-size: 13.333px;
+    font-weight: normal;
+    color: #6B7280;
+}
+
+.subRelease{
+    font-size: 13.333px;
+    font-weight: normal;
+    color: #CB253C;
+}
 .remove-border-bottom .mat-tab-header {
     border-bottom: none;
 }

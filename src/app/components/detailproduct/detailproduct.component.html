@@ -1,15 +1,23 @@
-<div style="padding-top: 50px;">
+<div style="padding-top: 28px;">
     <mat-card class="mat-elevation-z0; productoSecundario">
+        <div style="padding-bottom: 20px;">
+            <label class="subRelease">NEW RELEASE</label>
+        </div>        
         <mat-card-title class="title">MOMENTUN True Wireless 2</mat-card-title>
-        <mat-card-subtitle>Earbuds that put sound first</mat-card-subtitle>
-
-        <label>STARTING AT</label>
-        <label>$295.95</label>
+        <div style="padding-top: 15px; padding-bottom: 25px;">
+            <mat-card-subtitle class="subTitleDetailProduc" >Earbuds that put sound first</mat-card-subtitle>
+        </div>
+        <label class="submesage">STARTING AT</label>
+        <br>
+        <div style="margin-top: 20px; margin-bottom: 40px;">
+            <label class="title">$295.95</label>
+        </div>
+        
         <app-tab></app-tab>
         
         
-            <app-slide></app-slide>
-            <div style="margin-top: 50px;"></div>
+        <app-slide [padre]="'detailProduct'"></app-slide>
+        <div style="margin-top: 50px;"></div>
         <app-garantia></app-garantia>
     </mat-card>
 

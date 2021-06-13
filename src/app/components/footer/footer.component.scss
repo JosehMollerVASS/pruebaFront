@@ -15,8 +15,8 @@
 
 
 .cardSecudario{
-    padding-left: 20px;
-    padding-right: 20PX;
+    //padding-left: 5px;
+    padding-right: 50px;
     width: 24%;
     .title{
         font-size: 14px;
@@ -60,8 +60,16 @@
 
 .botonPagar{
     height: 56px;
-    width: 113px;
+    width: 125px;
     background-color: #1E96D4;
     color: white;
     border-radius: 8px;
+
 }
+.botonPagar:hover {
+    background-color: #66BEEB;
+  }
+  .botonPagar:focus {
+    background-color:#1E96D4;
+    border: 2px solid #D8DCE0;
+  }

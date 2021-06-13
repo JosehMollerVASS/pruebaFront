@@ -1,15 +1,29 @@
-<div  class="detailTitleSelected">
+<div style="margin-bottom: 10px;" class="detailTitleSelected">
     Would you like to add extended warranty coverage?.
 </div>
 
-<mat-card style="margin-right: 15px;"  class="mat-elevation-z0; garantiaProducto">        
-    <div   class="subtitle">
-        Ivory White
+<mat-card *ngFor="let item of warranty; let i=index" style="margin-right: 15px; margin-bottom: 15px;" class="mat-elevation-z0; garantiaProducto">
+    <div style="position: absolute; top: 25%; ">
+        <div class="row">
+            <div class="column">
+                <div class="subtitle">
+                    {{item.title}}
+                </div>
+                <div class="contentSubtitle">
+                    {{item.descripcion}}
+                </div>
+            </div>
+            <div *ngIf="item.precio != ''" style=" width: 180px; float: right; text-align: right;" class="column">
+                <div class="subtitle">
+                    + ${{item.precio}}
+                </div>
+              
+            </div>
+          </div>
+
+        
     </div>
-    <div class="contentSubtitle">
-        For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True. 
+    <div>
     </div>
-  <div >
-</div>
 
 </mat-card>

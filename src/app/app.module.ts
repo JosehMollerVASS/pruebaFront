@@ -16,6 +16,9 @@ import { TabComponent } from './components/tab/tab.component';
 import { SlideComponent } from './components/slide/slide.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { GarantiaComponent } from './components/garantia/garantia.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { DividerComponent } from './components/divider/divider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,9 @@ import { GarantiaComponent } from './components/garantia/garantia.component';
     DetailproductComponent,
     TabComponent,
     SlideComponent,
-    GarantiaComponent
+    GarantiaComponent,
+    NavbarComponent,
+    DividerComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +41,7 @@ import { GarantiaComponent } from './components/garantia/garantia.component';
     MatCardModule,
     MatTabsModule,
     NguCarouselModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
