@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-detailproduct',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detailproduct.component.scss']
 })
 export class DetailproductComponent implements OnInit {
-
-  constructor() { }
-
+  product: any;
+  constructor(private dataService: DataService) { 
+    this.product = this.dataService.product;
+  }
+  
   ngOnInit(): void {
   }
+
+
+
 
 }

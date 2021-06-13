@@ -1,16 +1,16 @@
 <div style="padding-top: 28px;">
     <mat-card class="mat-elevation-z0; productoSecundario">
         <div style="padding-bottom: 20px;">
-            <label class="subRelease">NEW RELEASE</label>
+            <label class="subRelease"> {{product.subname}} </label>
         </div>        
-        <mat-card-title class="title">MOMENTUN True Wireless 2</mat-card-title>
+        <mat-card-title class="title">{{product.name}}</mat-card-title>
         <div style="padding-top: 15px; padding-bottom: 25px;">
-            <mat-card-subtitle class="subTitleDetailProduc" >Earbuds that put sound first</mat-card-subtitle>
+            <mat-card-subtitle class="subTitleDetailProduc" > {{product.descripction}}</mat-card-subtitle>
         </div>
-        <label class="submesage">STARTING AT</label>
+        <label class="submesage">{{product.subDescripcion}}</label>
         <br>
         <div style="margin-top: 20px; margin-bottom: 40px;">
-            <label class="title">$295.95</label>
+            <label class="title">$ {{product.price}} </label>
         </div>
         
         <app-tab></app-tab>
@@ -18,7 +18,7 @@
         
         <app-slide [padre]="'detailProduct'"></app-slide>
         <div style="margin-top: 50px;"></div>
-        <app-garantia></app-garantia>
+        <app-garantia ></app-garantia>
     </mat-card>
 
     

@@ -2,7 +2,8 @@
     Would you like to add extended warranty coverage?.
 </div>
 
-<mat-card *ngFor="let item of warranty; let i=index" style="margin-right: 15px; margin-bottom: 15px;" class="mat-elevation-z0; garantiaProducto">
+<mat-card  [ngClass]="{'selecionado': selectWarranty[i]}"  (click)="select(i)" *ngFor="let item of warranty; let i=index" style="margin-right: 15px; margin-bottom: 15px;"
+    class="mat-elevation-z0; garantiaProducto">
     <div style="position: absolute; top: 25%; ">
         <div class="row">
             <div class="column">
@@ -13,17 +14,61 @@
                     {{item.descripcion}}
                 </div>
             </div>
-            <div *ngIf="item.precio != ''" style=" width: 180px; float: right; text-align: right;" class="column">
+            <div *ngIf="item.precio != ''" class="columnIzq" style="padding-top: 10px;">
                 <div class="subtitle">
                     + ${{item.precio}}
                 </div>
-              
-            </div>
-          </div>
 
-        
+            </div>
+        </div>
     </div>
     <div>
     </div>
 
+</mat-card>
+
+<div style="margin-bottom: 10px; margin-top: 50px;" class="detailTitleSelected">
+    Features.
+</div>
+<mat-card [ngClass]="{'selecionado': selectFeature[i]}"    (click)="selectFeatures(i)" *ngFor="let item of feature; let i=index" style="margin-right: 15px; margin-bottom: 15px; "
+    class="mat-elevation-z0; featureProducto">
+    <div style="position: absolute; top: 25%; margin-top: 5px">
+        <div class="row">
+            <div class="column">
+                <div class="subtitle">
+                    {{item.title}}
+                </div>
+            </div>
+            <div *ngIf="item.precio != ''" class="columnIzq">
+                <div class="subtitle">
+                    + ${{item.precio}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+</mat-card>
+
+<div style="margin-bottom: 10px; margin-top: 50px;" class="detailTitleSelected">
+    Specifications.
+</div>
+<mat-card  (click)="selectSpecificacion(i)" *ngFor="let item of specification; let i=index" style="margin-right: 15px; margin-bottom: 15px; "
+    class="mat-elevation-z0; featureProducto">
+    <div style="position: absolute; top: 25%; margin-top: 5px">
+        <div class="row">
+            <div class="column">
+                <div class="subtitle">
+                    {{item.title}}
+                </div>
+            </div>
+            <div  class="columnIzq">
+                <div class="subtitle">
+                    {{item.descripcion}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
 </mat-card>

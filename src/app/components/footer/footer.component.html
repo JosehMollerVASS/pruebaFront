@@ -14,7 +14,8 @@
     
     <div style="text-align: right; margin-top: 12px;" class="cardPrimario">
         <div style="text-align: right;" class="separador">
-           <label class="title">$295.95</label> 
+           <label *ngIf="total.total != ''" class="title">$ {{total.total}}</label> 
+           <label *ngIf="total.total == ''" class="title">$ {{product.price }}</label> 
         </div>        
         <label class="subtitle">Need financing? Learn more</label>     
     </div>

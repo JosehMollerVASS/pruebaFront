@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  product: any;
+  total:any;
+  constructor(private dataService: DataService) { 
+    this.product = this.dataService.product;
+    this.total = this.dataService.total;
+  }
 
   ngOnInit(): void {
   }
 
+ 
 }

@@ -20,7 +20,7 @@
 
 <div *ngIf="padre == 'product'">
     <ngu-carousel  #myCarousel [inputs]="carouselTileConfig" [dataSource]="imgags">
-        <mat-card [ngClass]="{'selecionado': selectsProd[i]}" (click)="selectProdct(i)" style="margin-right: 15px;" *nguCarouselDef="let item; let i = index; let ani = animate"
+        <mat-card [ngClass]="{'selecionado': selectsProd[i]}" (click)="selectImagen(imageDetail[i])" (click)="selectProdct(i, imageDetail[i])" style="margin-right: 15px;" *nguCarouselDef="let item; let i = index; let ani = animate"
             class="mat-elevation-z0; caruselProductoSlide">            
                 <img  style="width: 80px; top: 22%;
                 left: 35%; position: absolute; margin: -25px 10 0 -25px" mat-card-image  [src]="imageDetail[i]" />                       
